@@ -68,6 +68,8 @@ public interface TestObjectClient extends Closeable {
 
     public TestSuiteReport waitForSuiteReport(String user, String project, long testSuiteReport);
 
+	public TestSuiteReport waitForSuiteReport(final String user, final String project, final long testSuiteReportId, long waitTimeoutMs, long sleepTimeMs);
+
     public String readTestSuiteXMLReport(final String user, final String project, final long testSuiteReportId);
 
     void createAppVersion(String user, String project, File appApk);

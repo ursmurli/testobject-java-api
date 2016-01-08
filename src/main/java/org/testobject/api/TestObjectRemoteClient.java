@@ -78,7 +78,7 @@ public class TestObjectRemoteClient implements TestObjectClient {
     }
 
     public TestSuiteReport waitForSuiteReport(final String user, final String project, final long testSuiteReportId) {
-        return waitForSuiteReport(user, project, testSuiteReportId, TimeUnit.MINUTES.toMillis(60), TimeUnit.SECONDS.toMillis(30));
+        return waitForSuiteReport(user, project, testSuiteReportId, TimeUnit.MINUTES.toMillis(120), TimeUnit.SECONDS.toMillis(30));
     }
 
     public TestSuiteReport waitForSuiteReport(final String user, final String project, final long testSuiteReportId, long waitTimeoutMs, long sleepTimeMs) {
@@ -93,7 +93,7 @@ public class TestObjectRemoteClient implements TestObjectClient {
             sleep(sleepTimeMs);
         }
 
-        throw new IllegalStateException("unable to get test suite report result after 60min");
+        throw new IllegalStateException("unable to get test suite report result after 120min");
     }
     @Override
     public String readTestSuiteXMLReport(final String user, final String project, final long testSuiteReportId) {

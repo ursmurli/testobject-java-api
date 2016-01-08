@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.testobject</groupId>
 	<artifactId>testobject-java-api</artifactId>
-	<version>0.0.14</version>
+	<version>0.0.14.2</version>
 	<name>TestObject Java API</name>
 
 	<properties>
@@ -50,18 +50,14 @@
 		<connection>scm:git:git@github.com:testobject/testobject-java-api.git</connection>
 		<tag>HEAD</tag>
 	</scm>
-
 	<distributionManagement>
-		<repository>
-			<id>testobject-public-repo</id>
-			<url>http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo</url>
-		</repository>
-		<snapshotRepository>
-			<id>testobject-public-snapshots</id>
-			<url>http://nexus.testobject.org/nexus/content/repositories/testobject-public-snapshots</url>
-		</snapshotRepository>
+	    <repository>
+	        <id>artifactory.prodwest.citrixsaassbe.net</id>
+	        <name>artifactory.prodwest.citrixsaassbe.net-releases</name>
+	        <url>https://artifactory.prodwest.citrixsaassbe.net/artifactory/libs-release-local</url>
+	    </repository>
 	</distributionManagement>
-
+ 
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
