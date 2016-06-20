@@ -93,7 +93,7 @@ public class TestObjectRemoteClient implements TestObjectClient {
             sleep(sleepTimeMs);
         }
 
-        throw new IllegalStateException("unable to get test suite report result after 120min");
+        throw new IllegalStateException(String.format("unable to get test suite report result after %d min" , waitTimeoutMs));
     }
     @Override
     public String readTestSuiteXMLReport(final String user, final String project, final long testSuiteReportId) {
